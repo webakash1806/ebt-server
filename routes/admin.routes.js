@@ -58,7 +58,7 @@ router.post('/login', loginAuth, login)
 router.get('/logout', logout)
 
 // Route to get user profile information, requires user to be logged in (isLoggedIn)
-router.get('/me', isLoggedIn, profile)
+router.get('/me',  profile)
 
 // Route for initiating the forgot password process
 router.post('/forgot-password', forgotPassword)
@@ -67,41 +67,41 @@ router.post('/forgot-password', forgotPassword)
 router.post('/reset-password/:resetToken', resetPassword)
 
 // Route for changing the user's password, requires user to be logged in
-router.post('/change-password', isLoggedIn, changePassword)
+router.post('/change-password',  changePassword)
 
 // Route for updating user profile information with optional avatar upload
-router.put('/update-profile/:id', isLoggedIn, upload.single("avatar"), updateProfile)
+router.put('/update-profile/:id',  upload.single("avatar"), updateProfile)
 
 
-router.get('/car/list', isLoggedIn, carDriverList)
+router.get('/car/list',  carDriverList)
 
-router.get('/user/list', isLoggedIn, usersList)
+router.get('/user/list',  usersList)
 
-router.get('/boat/list', isLoggedIn, boatManList)
+router.get('/boat/list',  boatManList)
 
-router.get('/priest/list', isLoggedIn, priestList)
+router.get('/priest/list',  priestList)
 
-router.get('/guider/list', isLoggedIn, guiderList)
+router.get('/guider/list',  guiderList)
 
-router.get('/hotel/list', isLoggedIn, hotelList)
+router.get('/hotel/list',  hotelList)
 
-router.put('/car/update-status', isLoggedIn, updateDriverStatus)
+router.put('/car/update-status',  updateDriverStatus)
 
-router.put('/boat/update-status', isLoggedIn, updateBoatmanStatus)
+router.put('/boat/update-status',  updateBoatmanStatus)
 
-router.put('/priest/update-status', isLoggedIn, updatePriestStatus)
+router.put('/priest/update-status',  updatePriestStatus)
 
-router.put('/guider/update-status', isLoggedIn, updateGuiderStatus)
+router.put('/guider/update-status',  updateGuiderStatus)
 
-router.put('/hotel/update-status', isLoggedIn, updateHotelStatus)
+router.put('/hotel/update-status',  updateHotelStatus)
 
-router.get('/car/detail/:id', isLoggedIn, getDriverData)
+router.get('/car/detail/:id',  getDriverData)
 
-router.get('/boat/detail/:id', isLoggedIn, getBoatmanDetail)
+router.get('/boat/detail/:id',  getBoatmanDetail)
 
-router.get('/priest/detail/:id', isLoggedIn, getPriestDetail)
+router.get('/priest/detail/:id',  getPriestDetail)
 
-router.get('/guider/detail/:id', isLoggedIn, getGuiderDetail)
+router.get('/guider/detail/:id',  getGuiderDetail)
 
 router.get('/hotel/detail/:id', getHotelDetail)
 
